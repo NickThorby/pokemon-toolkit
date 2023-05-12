@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="PokemonType" load_steps=6 format=3 uid="uid://dqryq2f37o3bh"]
+
+[ext_resource type="Script" path="res://data/pokemon/type/pokemon_type.gd" id="1_0clxx"]
+[ext_resource type="Texture2D" uid="uid://dewikbdfs20yu" path="res://data/pokemon/type/ui/ghost/ghost_name.png" id="1_wo18j"]
+[ext_resource type="Texture2D" uid="uid://cjhfun2pe2pby" path="res://data/pokemon/type/ui/ghost/ghost_symbol.png" id="3_pqwno"]
+[ext_resource type="Texture2D" uid="uid://cnr2snosk0igu" path="res://data/pokemon/type/ui/ghost/ghost_tera_name.png" id="4_lhrek"]
+[ext_resource type="Texture2D" uid="uid://bv3d2emhnk08r" path="res://data/pokemon/type/ui/ghost/ghost_tera_symbol.png" id="5_luph2"]
+
+[resource]
+script = ExtResource("1_0clxx")
+name = "Ghost"
+symbol_icon = ExtResource("3_pqwno")
+tera_symbol_icon = ExtResource("5_luph2")
+name_icon = ExtResource("1_wo18j")
+tera_name_icon = ExtResource("4_lhrek")
+color = Color(0.45098, 0.341176, 0.592157, 1)
+weaknesses = Array[ExtResource("1_0clxx")]([])
+resistances = Array[ExtResource("1_0clxx")]([])
+immunities = Array[ExtResource("1_0clxx")]([])

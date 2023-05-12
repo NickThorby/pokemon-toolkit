@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="PokemonType" load_steps=6 format=3 uid="uid://dqpu1glc61hf2"]
+
+[ext_resource type="Script" path="res://data/pokemon/type/pokemon_type.gd" id="1_cu2kn"]
+[ext_resource type="Texture2D" uid="uid://wlguyekahms5" path="res://data/pokemon/type/ui/dragon/dragon_name.png" id="1_rxtd8"]
+[ext_resource type="Texture2D" uid="uid://bby1g711roevc" path="res://data/pokemon/type/ui/dragon/dragon_symbol.png" id="3_fgt3l"]
+[ext_resource type="Texture2D" uid="uid://bpi7si5uhatlq" path="res://data/pokemon/type/ui/dragon/dragon_tera_name.png" id="4_kq0yi"]
+[ext_resource type="Texture2D" uid="uid://bfhc0lxhemgnl" path="res://data/pokemon/type/ui/dragon/dragon_tera_symbol.png" id="5_il7bp"]
+
+[resource]
+script = ExtResource("1_cu2kn")
+name = "Dragon"
+symbol_icon = ExtResource("3_fgt3l")
+tera_symbol_icon = ExtResource("5_il7bp")
+name_icon = ExtResource("1_rxtd8")
+tera_name_icon = ExtResource("4_kq0yi")
+color = Color(0.435294, 0.207843, 0.988235, 1)
+weaknesses = Array[ExtResource("1_cu2kn")]([])
+resistances = Array[ExtResource("1_cu2kn")]([])
+immunities = Array[ExtResource("1_cu2kn")]([])
