@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="PokemonClassification" load_steps=2 format=3 uid="uid://bday66133hb1a"]
+
+[ext_resource type="Script" path="res://data/pokemon/classification/pokemon_classification.gd" id="1_fdiql"]
+
+[resource]
+script = ExtResource("1_fdiql")
+name = "Legendary"
