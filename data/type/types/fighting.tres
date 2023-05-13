@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="PokemonType" load_steps=6 format=3 uid="uid://cgj60ichs4pen"]
+
+[ext_resource type="Texture2D" uid="uid://djud0jpcw4tgl" path="res://data/pokemon/type/ui/fighting/fighting_name.png" id="1_2g7ko"]
+[ext_resource type="Script" path="res://data/pokemon/type/pokemon_type.gd" id="1_yr4fk"]
+[ext_resource type="Texture2D" uid="uid://dv4myjcd3qpy4" path="res://data/pokemon/type/ui/fighting/fighting_symbol.png" id="3_wtpyb"]
+[ext_resource type="Texture2D" uid="uid://dn6ctdplvelp5" path="res://data/pokemon/type/ui/fighting/fighting_tera_name.png" id="4_4waww"]
+[ext_resource type="Texture2D" uid="uid://dux2slghvyp5m" path="res://data/pokemon/type/ui/fighting/fighting_tera_symbol.png" id="5_dcnwa"]
+
+[resource]
+script = ExtResource("1_yr4fk")
+name = "Fighting"
+symbol_icon = ExtResource("3_wtpyb")
+tera_symbol_icon = ExtResource("5_dcnwa")
+name_icon = ExtResource("1_2g7ko")
+tera_name_icon = ExtResource("4_4waww")
+color = Color(0.760784, 0.180392, 0.156863, 1)
+weaknesses = Array[ExtResource("1_yr4fk")]([])
+resistances = Array[ExtResource("1_yr4fk")]([])
+immunities = Array[ExtResource("1_yr4fk")]([])

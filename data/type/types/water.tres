@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="PokemonType" load_steps=6 format=3 uid="uid://beudapc438cr2"]
+
+[ext_resource type="Texture2D" uid="uid://bk8pj6rfq2agc" path="res://data/pokemon/type/ui/water/water_name.png" id="1_3qayh"]
+[ext_resource type="Script" path="res://data/pokemon/type/pokemon_type.gd" id="1_77nm1"]
+[ext_resource type="Texture2D" uid="uid://cp3kgor18y2r4" path="res://data/pokemon/type/ui/water/water_symbol.png" id="3_m3v22"]
+[ext_resource type="Texture2D" uid="uid://c607bmek36510" path="res://data/pokemon/type/ui/water/water_tera_name.png" id="4_v6v5u"]
+[ext_resource type="Texture2D" uid="uid://yro7tkyhkqb4" path="res://data/pokemon/type/ui/water/water_tera_symbol.png" id="5_w0yyu"]
+
+[resource]
+script = ExtResource("1_77nm1")
+name = "Water"
+symbol_icon = ExtResource("3_m3v22")
+tera_symbol_icon = ExtResource("5_w0yyu")
+name_icon = ExtResource("1_3qayh")
+tera_name_icon = ExtResource("4_v6v5u")
+color = Color(0.388235, 0.564706, 0.941176, 1)
+weaknesses = Array[ExtResource("1_77nm1")]([])
+resistances = Array[ExtResource("1_77nm1")]([])
+immunities = Array[ExtResource("1_77nm1")]([])

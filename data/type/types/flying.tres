@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="PokemonType" load_steps=6 format=3 uid="uid://dndf7ibd265ky"]
+
+[ext_resource type="Script" path="res://data/pokemon/type/pokemon_type.gd" id="1_cah7o"]
+[ext_resource type="Texture2D" uid="uid://d1tjksiuny7ew" path="res://data/pokemon/type/ui/flying/flying_name.png" id="1_g1fik"]
+[ext_resource type="Texture2D" uid="uid://i05h37jbmvti" path="res://data/pokemon/type/ui/flying/flying_symbol.png" id="3_p6j2o"]
+[ext_resource type="Texture2D" uid="uid://dgepiwbdcsq4c" path="res://data/pokemon/type/ui/flying/flying_tera_name.png" id="4_bg5k2"]
+[ext_resource type="Texture2D" uid="uid://cjlqw0rubnn2" path="res://data/pokemon/type/ui/flying/flying_tera_symbol.png" id="5_ntv04"]
+
+[resource]
+script = ExtResource("1_cah7o")
+name = "Flying"
+symbol_icon = ExtResource("3_p6j2o")
+tera_symbol_icon = ExtResource("5_ntv04")
+name_icon = ExtResource("1_g1fik")
+tera_name_icon = ExtResource("4_bg5k2")
+color = Color(0.662745, 0.560784, 0.952941, 1)
+weaknesses = Array[ExtResource("1_cah7o")]([])
+resistances = Array[ExtResource("1_cah7o")]([])
+immunities = Array[ExtResource("1_cah7o")]([])

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="PokemonType" load_steps=6 format=3 uid="uid://un7oy486bpyh"]
+
+[ext_resource type="Script" path="res://data/pokemon/type/pokemon_type.gd" id="1_og0lx"]
+[ext_resource type="Texture2D" uid="uid://cvm21da722e0y" path="res://data/pokemon/type/ui/grass/grass_name.png" id="1_urfh4"]
+[ext_resource type="Texture2D" uid="uid://shaj1r7uhsgu" path="res://data/pokemon/type/ui/grass/grass_symbol.png" id="3_h3ouw"]
+[ext_resource type="Texture2D" uid="uid://dl8lwlpoxruak" path="res://data/pokemon/type/ui/grass/grass_tera_name.png" id="4_ppny5"]
+[ext_resource type="Texture2D" uid="uid://cc8cc2kmmlmqi" path="res://data/pokemon/type/ui/grass/grass_tera_symbol.png" id="5_5jult"]
+
+[resource]
+script = ExtResource("1_og0lx")
+name = "Grass"
+symbol_icon = ExtResource("3_h3ouw")
+tera_symbol_icon = ExtResource("5_5jult")
+name_icon = ExtResource("1_urfh4")
+tera_name_icon = ExtResource("4_ppny5")
+color = Color(0.478431, 0.780392, 0.298039, 1)
+weaknesses = Array[ExtResource("1_og0lx")]([])
+resistances = Array[ExtResource("1_og0lx")]([])
+immunities = Array[ExtResource("1_og0lx")]([])

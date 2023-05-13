@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PokemonAbility" load_steps=2 format=3 uid="uid://bsf4sb5bnd1va"]
+
+[ext_resource type="Script" path="res://data/pokemon/ability/pokemon_ability.gd" id="1_jg8mi"]
+
+[resource]
+script = ExtResource("1_jg8mi")
+number = 1
+name = "Stench"
+short_description = "By releasing a stench when attacking, the Pokémon may cause the target to flinch.	"
+description = "This Pokémon's attacks without a chance to make the target flinch gain a 10% chance to make the target flinch. Outside of battle, if a Pokémon with Stench is in the first place in the party (even if fainted), the chance of encountering a wild Pokémon is decreased by 50%."
+generation = 0

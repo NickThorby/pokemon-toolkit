@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="PokemonEggGroup" load_steps=2 format=3 uid="uid://cobwj4k1cd5fh"]
+
+[ext_resource type="Script" path="res://data/pokemon/egg_group/pokemon_egg_group.gd" id="1_i6ilg"]
+
+[resource]
+script = ExtResource("1_i6ilg")
+name = "Bug"
