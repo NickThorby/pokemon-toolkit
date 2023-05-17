@@ -1,7 +1,0 @@
-[gd_resource type="Resource" script_class="PokemonClassification" load_steps=2 format=3 uid="uid://b5gcvdef0f007"]
-
-[ext_resource type="Script" path="res://data/pokemon/classification/pokemon_classification.gd" id="1_68phh"]
-
-[resource]
-script = ExtResource("1_68phh")
-name = "Mythical"

@@ -1,0 +1,2 @@
+extends HitEffect
+class_name SecondaryEffect

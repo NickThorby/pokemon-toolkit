@@ -1,7 +1,0 @@
-[gd_resource type="Resource" script_class="PokemonEggGroup" load_steps=2 format=3 uid="uid://c85wwjsqko43t"]
-
-[ext_resource type="Script" path="res://data/pokemon/egg_group/pokemon_egg_group.gd" id="1_cprvn"]
-
-[resource]
-script = ExtResource("1_cprvn")
-name = "Ditto"

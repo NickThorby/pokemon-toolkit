@@ -1,0 +1,92 @@
+class_name GameData
+
+enum ContestType {
+	COOL,
+	BEAUTIFUL,
+	CUTE,
+	CLEVER,
+	TOUGH,
+}
+
+enum MoveCategory {
+	PHYSICAL,
+	SPECIAL,
+	STATUS,
+}
+
+enum PokemonClassification {
+    NORMAL,
+    PSEUDO_LEGENDARY,
+    SUB_LEGENDARY,
+    LEGENDARY,
+    MYTHICAL,
+    ULTRA_BEAST,
+    PARADOX
+}
+
+enum PokemonGender {
+    STANDARD,
+    ALWAYS_MALE,
+    ALWAYS_FEMALE,
+    GENDERLESS
+}
+enum Gender {
+    MALE,
+    FEMALE
+}
+enum EggGroup {
+    NONE,
+    MONSTER,
+    WATER_1,
+    BUG,
+    FLYING,
+    FIELD,
+    FAIRY,
+    GRASS,
+    HUMAN_LIKE,
+    WATER_3,
+    MINERAL,
+    AMORPHOUS,
+    WATER_2,
+    DITTO,
+    DRAGON,
+    UNDISCOVERED,
+}
+
+enum EvolutionTrigger {
+    LEVEL_UP, 
+    TRADE, 
+    USE_ITEM,
+    LOCATION, 
+    SPIN,
+}
+enum EvolutionCondition {
+    MIN_LEVEL,
+    MIN_FRIENDSHIP,
+    HELD_ITEM,
+    IS_GENDER,
+    TYPE_IN_PARTY,
+    POKEMON_IN_PARTY,
+    RELATIVE_STATS,
+    CONTEST_CONDITION,
+    PERSONALITY_VALUE,
+    ENCRYPTION_CONSTANT,
+    TIME_OF_DAY,
+    OVERWORLD_WEATHER,
+    OVERWORLD_MOON_PHASE,
+    KNOWS_MOVE,
+    KNOWS_MOVE_TYPE,
+    MOVE_USED_NUMBER_OF_TIMES,
+    CRITICAL_HITS_LANDED,
+    TAKEN_RECOIL_DAMAGE,
+    TAKEN_DAMAGE_WITHOUT_FAINTING,
+    DEFEATED_POKEMON_HOLDING_ITEM,
+    STEPS_WALKED_OUTSIDE_OF_BALL,
+    TRADED_FOR_SPECIES,
+    UPSIDE_DOWN,
+    ITEMS_IN_BAG,
+    SPIN_LENGTH,
+    SPIN_DIRECTION,
+    LOCATION,
+    REGION,
+}

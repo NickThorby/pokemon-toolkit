@@ -1,0 +1,2 @@
+extends Action
+class_name MoveAction

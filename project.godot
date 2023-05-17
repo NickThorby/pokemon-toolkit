@@ -13,3 +13,8 @@ config_version=5
 config/name="Pokémon Toolkit"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Utils="*res://global/autoload/utils.gd"
+ErrorHandler="*res://global/autoload/error_handler.gd"

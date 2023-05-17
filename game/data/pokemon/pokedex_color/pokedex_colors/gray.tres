@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="PokedexColor" load_steps=2 format=3 uid="uid://c07myyitid3t6"]
+
+[ext_resource type="Script" path="res://game/data/pokemon/pokedex_color/pokedex_color.gd" id="1_gpp2i"]
+
+[resource]
+script = ExtResource("1_gpp2i")
+name = "Gray"
+color = Color(0.819608, 0.819608, 0.878431, 1)
