@@ -1,2 +1,2 @@
 extends Dexable
-class_name Move
+class_name Item

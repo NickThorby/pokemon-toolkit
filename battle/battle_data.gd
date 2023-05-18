@@ -92,9 +92,9 @@ enum MoveTarget {
 	SELF, # The move affects the user of the move.
 }
 
-enum RelayVarState {
+enum EventHandlerState {
     KEEP_GOING,
-    INTERRUPT,
-    INTERRUPT_SUPPRESS,
-    HAS_VALUE,
+    FAIL_LOUDLY,
+    FAIL_SILENTLY,
+    SET_VALUE,
 }

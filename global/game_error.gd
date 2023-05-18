@@ -2,5 +2,5 @@ class_name GameError
 
 var message: String
 
-func _init(p_message: String):
+func _init(p_message: String) -> void:
     self.message = p_message

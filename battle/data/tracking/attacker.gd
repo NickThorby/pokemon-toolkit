@@ -6,7 +6,7 @@ var damage # int
 var thisTurn # bool
 var move # String
 var slot # String
-var damageValue # int | bool | null
+var damageValue # EHR
 
 func _init(data):
     source = data.source
