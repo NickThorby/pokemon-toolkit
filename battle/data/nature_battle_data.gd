@@ -11,15 +11,7 @@ func _init(p_nature_data):
 	self.fullname = "nature: %s" % p_nature_data.name
 	self.effect_type = BattleData.EffectType.NATURE
 	self.gen = 3
-
-	if "plus" in p_nature_data:
-		self.plus = p_nature_data.plus
-	else:
-		self.plus = null
-
-	if "minus" in p_nature_data:
-		self.minus = p_nature_data.minus
-	else:
-		self.minus = null
+	self.plus = p_nature_data.plus
+	self.minus = p_nature_data.minus
 	
 

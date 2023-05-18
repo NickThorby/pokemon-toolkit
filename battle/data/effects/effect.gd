@@ -125,12 +125,12 @@ func _init(p_effect_data):
 	if p_effect_data.has("no_copy"):
 		self.no_copy = bool(p_effect_data.no_copy)
 	else:
-		self.no_copy = null
+		self.no_copy = false
 
 	if p_effect_data.has("affects_fainted"):
 		self.affects_fainted = bool(p_effect_data.affects_fainted)
 	else:
-		self.affects_fainted = null
+		self.affects_fainted = false
 
 	if p_effect_data.has("infiltrates"):
 		self.infiltrates = p_effect_data.infiltrates

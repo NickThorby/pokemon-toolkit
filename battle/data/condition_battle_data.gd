@@ -496,7 +496,7 @@ var on_field_residual_order # number
 var on_field_residual_priority # number
 var on_field_residual_sub_order # number
 
-var counter_max # number
+var counter_max # number | null
 var on_copy # (this: Battle, pokemon: BattlePokemon) -> void
 var on_end # (this: Battle, target: BattlePokemon) -> void
 var on_restart # (this: Battle, target: BattlePokemon, source: BattlePokemon, source_effect: Effect) -> EHR | void
