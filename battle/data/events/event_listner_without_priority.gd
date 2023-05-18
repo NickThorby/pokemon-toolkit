@@ -11,6 +11,5 @@ var endCallArgs;
 var effectHolder: Effect
 
 func _init(p_event_listener_data):
-    if p_event_listener_data:
-        Utils.assign_properties(p_event_listener_data, self)
+    Utils.assign_properties(p_event_listener_data, self)
     

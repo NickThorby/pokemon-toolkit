@@ -9,5 +9,4 @@ var slot # String
 var damageValue # EHR
 
 func _init(p_attacker_data):
-    if p_attacker_data:
-        Utils.assign_properties(p_attacker_data, self)
+    Utils.assign_properties(p_attacker_data, self)
