@@ -1,45 +1,39 @@
 extends Object
 class_name Choice
 
-var choice: BattleData.BattleChoice
-var pokemon: BattlePokemon # The Pokemon doing the action
-var target_loc: int # Relative location of the target to pokemon (move action only)
-var move_id: String # A move to use (move action only)
-var move: ActiveMove # The active move corresponding to moveid (move action only)
-var target: BattlePokemon # The target of the action
-var index: int # The chosen index in Team Preview
-var side: BattleSide # The action's side
-var mega # True if megaing or ultra bursting
-var z_move # If Z-moving, the name of the Z-move
-var max_move # If Dynamaxed, the name of the Max move
-var terastallize # If terastallizing, the Pokemon's tera type
-var priority: int # Priority of the action
+var cant_undo: bool # true if the choice can't be cancelled because of the maybeTrapped issue
+var error: String # contains error text in the case of a choice error
+var actions: Array[ChosenAction] # array of chosen actions
+var forced_switches_left: int # number of switches left that need to be performed
+var forced_passes_left: int # number of passes left that need to be performed
+var switch_ins: Array[int] # indexes of pokemon chosen to switch in
+var z_move: bool # true if a Z-move has already been selected
+var mega: bool # true if a mega evolution has already been selected
+var ultra: bool # true if an ultra burst has already been selected
+var dynamax: bool # true if a dynamax has already been selected
+var terastallize: bool # true if a terastallization has already been inputted
 
 func _init(
-    p_choice: BattleData.BattleChoice = BattleData.BattleChoice.PASS_TURN,
-    p_pokemon: BattlePokemon = null,
-    p_target_loc: int = -1,
-    p_move_id: String = "",
-    p_move: ActiveMove = null,
-    p_target: BattlePokemon = null,
-    p_index: int = -1,
-    p_side: BattleSide = null,
-    p_mega = null,
-    p_z_move = null,
-    p_max_move = null,
-    p_terastallize = null,
-    p_priority: int = 0
+    p_cant_undo: bool = false,
+    p_error: String = "",
+    p_actions: Array[ChosenAction] = [],
+    p_forced_switches_left: int = 0,
+    p_forced_passes_left: int = 0,
+    p_switch_ins: Array[int] = [],
+    p_z_move: bool = false,
+    p_mega: bool = false,
+    p_ultra: bool = false,
+    p_dynamax: bool = false,
+    p_terastallize: bool = false
 ): 
-    choice = p_choice
-    pokemon = p_pokemon
-    target_loc = p_target_loc
-    move_id = p_move_id
-    move = p_move
-    target = p_target
-    index = p_index
-    side = p_side
-    mega = p_mega
+    cant_undo = p_cant_undo
+    error = p_error
+    actions = p_actions
+    forced_switches_left = p_forced_switches_left
+    forced_passes_left = p_forced_passes_left
+    switch_ins = p_switch_ins
     z_move = p_z_move
-    max_move = p_max_move
+    mega = p_mega
+    ultra = p_ultra
+    dynamax = p_dynamax
     terastallize = p_terastallize
-    priority = p_priority
