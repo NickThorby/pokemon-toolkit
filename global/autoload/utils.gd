@@ -11,6 +11,6 @@ func to_id(text) -> String:
     id = id.gsub("[^a-z0-9]+", "")
     return id
 
-func assign_properties(source, target) -> void:
+func assign_properties(source, target):
     for key in source.keys():
         target[key] = source[key]

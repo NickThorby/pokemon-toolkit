@@ -7,6 +7,6 @@ class_name PokedexColor
 func _init(
     p_name: String = "", 
     p_color: Color = Color(1, 1, 1)
-) -> void:
+):
     self.name = p_name
     self.color = p_color

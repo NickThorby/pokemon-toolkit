@@ -7,7 +7,7 @@ class_name PokemonGrowthRate
 func _init(
         p_name: String = "", 
         p_exp_per_level: Array[int] = []
-) -> void:
+):
     self.name = p_name;
     self.exp_per_level = p_exp_per_level;
 
