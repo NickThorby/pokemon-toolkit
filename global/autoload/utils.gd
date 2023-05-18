@@ -1,16 +1,18 @@
 extends Node
 
 func to_id(text) -> String:
-    if text != null and text.has("id"):
-        text = text.id
+	if typeof(text) == TYPE_OBJECT and text != null and text.has("id"):
+		text = text.id
 
-    if typeof(text) != TYPE_STRING and typeof(text) != TYPE_INT:
-        return ""
+	if typeof(text) != TYPE_STRING and typeof(text) != TYPE_INT:
+		return ""
 
-    var id = str(text).to_lower()
-    id = id.gsub("[^a-z0-9]+", "")
-    return id
+	var regex = RegEx.new()
+	regex.compile("[^a-z0-9]+")
+	var id = str(text).to_lower()
+	id = regex.sub(id, "")
+	return id
 
 func assign_properties(source, target):
-    for key in source.keys():
-        target[key] = source[key]
+	for key in source.keys():
+		target[key] = source[key]

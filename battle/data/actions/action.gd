@@ -21,5 +21,4 @@ var event
 var index
 
 func _init(p_action_data): 
-    if p_action_data:
-        Utils.assign_properties(p_action_data, self)
+    Utils.assign_properties(p_action_data, self)

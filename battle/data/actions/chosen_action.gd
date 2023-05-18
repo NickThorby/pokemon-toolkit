@@ -15,6 +15,5 @@ var max_move # If Dynamaxed, the name of the Max move
 var terastallize # If terastallizing, the Pokemon's tera type
 var priority: int # Priority of the action
 
-func _init(p_chosen_action_data = null): 
-    if p_chosen_action_data:
-        Utils.assign_properties(p_chosen_action_data, self)
+func _init(p_chosen_action_data): 
+    Utils.assign_properties(p_chosen_action_data, self)

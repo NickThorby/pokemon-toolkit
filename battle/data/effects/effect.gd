@@ -65,85 +65,92 @@ var weather # String
 var source_effect # String
 
 func _init(p_effect_data):
-    self.exists = true
-    Utils.assign_properties(p_effect_data, self)
+	self.exists = true
+	Utils.assign_properties(p_effect_data, self)
 
-    self.name = p_effect_data.name.strip_edges()
+	self.name = p_effect_data.name.strip_edges()
 
-    if p_effect_data.has("real_move"):
-        self.id = Utils.to_id(p_effect_data.real_move)
-    else:
-        self.id = Utils.to_id(self.name)
+	if p_effect_data.has("real_move"):
+		self.id = Utils.to_id(p_effect_data.real_move)
+	else:
+		self.id = Utils.to_id(self.name)
 
-    if p_effect_data.has("fullname"):
-        self.fullname = p_effect_data.fullname
-    else:
-        self.fullname = self.name
+	if p_effect_data.has("fullname"):
+		self.fullname = p_effect_data.fullname
+	else:
+		self.fullname = self.name
 
-    if p_effect_data.has("effect_type"):
-        self.effect_type = p_effect_data.effect_type
-    else:
-        self.effect_type = BattleData.EffectType.CONDITION
+	if p_effect_data.has("effect_type"):
+		self.effect_type = p_effect_data.effect_type
+	else:
+		self.effect_type = BattleData.EffectType.CONDITION
 
-    self.exists = bool(self.exists && self.id)
+	self.exists = bool(self.exists && self.id)
 
-    if p_effect_data.has("num"):
-        self.num = p_effect_data.num
-    else:
-        self.num = 0
+	if p_effect_data.has("num"):
+		self.num = p_effect_data.num
+	else:
+		self.num = 0
 
-    if p_effect_data.has("gen"):
-        self.gen = p_effect_data.gen
-    else:
-        self.gen = 0
+	if p_effect_data.has("gen"):
+		self.gen = p_effect_data.gen
+	else:
+		self.gen = 0
 
-    if p_effect_data.has("short_description"):
-        self.short_description = p_effect_data.short_description
-    else:
-        self.short_description = ""
+	if p_effect_data.has("short_description"):
+		self.short_description = p_effect_data.short_description
+	else:
+		self.short_description = ""
 
-    if p_effect_data.has("description"):
-        self.description = p_effect_data.description
-    else:
-        self.description = ""
+	if p_effect_data.has("description"):
+		self.description = p_effect_data.description
+	else:
+		self.description = ""
 
-    if p_effect_data.has("is_non_standard"):
-        self.is_non_standard = p_effect_data.is_non_standard
-    else:
-        self.is_non_standard = null
+	if p_effect_data.has("is_non_standard"):
+		self.is_non_standard = p_effect_data.is_non_standard
+	else:
+		self.is_non_standard = null
 
-    if p_effect_data.has("duration"):
-        self.duration = p_effect_data.duration
-    else:
-        self.duration = null
+	if p_effect_data.has("duration"):
+		self.duration = p_effect_data.duration
+	else:
+		self.duration = null
 
-    if p_effect_data.has("duration_callback"):
-        self.duration_callback = p_effect_data.duration_callback
-    else:
-        self.duration_callback = null
+	if p_effect_data.has("duration_callback"):
+		self.duration_callback = p_effect_data.duration_callback
+	else:
+		self.duration_callback = null
 
-    self.no_copy = bool(p_effect_data.no_copy)
-    self.affects_fainted = bool(p_effect_data.affects_fainted)
+	if p_effect_data.has("no_copy"):
+		self.no_copy = bool(p_effect_data.no_copy)
+	else:
+		self.no_copy = null
 
-    if p_effect_data.has("infiltrates"):
-        self.infiltrates = p_effect_data.infiltrates
-    else:
-        self.infiltrates = null
+	if p_effect_data.has("affects_fainted"):
+		self.affects_fainted = bool(p_effect_data.affects_fainted)
+	else:
+		self.affects_fainted = null
 
-    if p_effect_data.has("status"):
-        self.status = p_effect_data.status
-    else:
-        self.status = null
-    
-    if p_effect_data.has("weather"):
-        self.weather = p_effect_data.weather
-    else:
-        self.weather = null
+	if p_effect_data.has("infiltrates"):
+		self.infiltrates = p_effect_data.infiltrates
+	else:
+		self.infiltrates = null
 
-    if p_effect_data.has("source_effect"):
-        self.source_effect = p_effect_data.source_effect
-    else:
-        self.source_effect = ""
+	if p_effect_data.has("status"):
+		self.status = p_effect_data.status
+	else:
+		self.status = null
+	
+	if p_effect_data.has("weather"):
+		self.weather = p_effect_data.weather
+	else:
+		self.weather = null
+
+	if p_effect_data.has("source_effect"):
+		self.source_effect = p_effect_data.source_effect
+	else:
+		self.source_effect = ""
 
 func _to_string():
-    return self.name
+	return self.name

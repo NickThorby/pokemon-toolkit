@@ -14,5 +14,4 @@ var dynamax: bool # true if a dynamax has already been selected
 var terastallize: bool # true if a terastallization has already been inputted
 
 func _init(p_choice_data): 
-    if p_choice_data:
-        Utils.assign_properties(p_choice_data, self)
+    Utils.assign_properties(p_choice_data, self)
