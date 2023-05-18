@@ -504,6 +504,7 @@ var on_start # (this: Battle, target: BattlePokemon, source: BattlePokemon, sour
 
 func _init(p_condition_data):
     super(p_condition_data)
+    p_condition_data = self
 
     self.counter_max = p_condition_data.counter_max
     if [BattleData.EffectType.WEATHER, BattleData.EffectType.STATUS].has(p_condition_data.effect_type):

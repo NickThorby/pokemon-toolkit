@@ -30,6 +30,18 @@ enum PokemonGender {
     ALWAYS_FEMALE,
     GENDERLESS
 }
+
+enum PokemonStat{
+    HP,
+    ATTACK,
+    DEFENSE,
+    SPECIAL_ATTACK,
+    SPECIAL_DEFENSE,
+    SPEED,
+    ACCURACY,
+    EVASION,
+}
+
 enum Gender {
     MALE,
     FEMALE

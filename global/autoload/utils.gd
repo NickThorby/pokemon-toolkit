@@ -15,5 +15,4 @@ func to_id(text) -> String:
 
 func assign_properties(source, target):
 	for key in source.keys():
-		if target.has(key):
-			target[key] = source[key]
+		target.set(key, source[key])
