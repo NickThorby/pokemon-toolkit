@@ -1,6 +1,6 @@
 class_name BattleData
 
-enum BattleChoice {
+enum Choice {
 	MOVE,
 	SWITCH,
 	INSTA_SWITCH,
@@ -33,11 +33,12 @@ enum ActionChoice {
 	INSTA_SWITCH,
 	REVIVAL_BLESSING,
 	TEAM,
-	NONE
+	NONE,
 }
 
 enum BattleType {
     WILD,
+	WILD_DOUBLE,
     SOS,
     HORDE,
     SINGLES,
@@ -57,7 +58,7 @@ enum BattleRequestState {
     TEAM_PREVIEW,
     MOVE,
     SWITCH,
-    BLANK
+    BLANK,
 }
 
 enum EffectType {
@@ -70,7 +71,7 @@ enum EffectType {
 	WEATHER,
 	STATUS,
 	TERASTAL,
-	RULE
+	RULE,
 }
 
 enum MoveFlag {
@@ -126,6 +127,11 @@ enum MoveTarget {
 	RANDOM_NORMAL, # The move targets an adjacent foe at random.
 	SCRIPTED, # The move targets the foe that damaged the user.
 	SELF, # The move affects the user of the move.
+}
+
+enum NonStandard {
+	PAST,
+	FUTURE,
 }
 
 enum EventHandlerState {

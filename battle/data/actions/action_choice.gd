@@ -3,5 +3,5 @@ class_name ActionChoice
 
 var choice: BattleData.ActionChoice
 
-func _init(p_data):
-    Utils.assign_properties(p_data, self)
+func _init(p_action_choice_data):
+    Utils.assign_properties(p_action_choice_data, self)

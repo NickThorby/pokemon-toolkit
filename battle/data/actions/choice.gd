@@ -13,27 +13,6 @@ var ultra: bool # true if an ultra burst has already been selected
 var dynamax: bool # true if a dynamax has already been selected
 var terastallize: bool # true if a terastallization has already been inputted
 
-func _init(
-    p_cant_undo: bool = false,
-    p_error: String = "",
-    p_actions: Array[ChosenAction] = [],
-    p_forced_switches_left: int = 0,
-    p_forced_passes_left: int = 0,
-    p_switch_ins: Array[int] = [],
-    p_z_move: bool = false,
-    p_mega: bool = false,
-    p_ultra: bool = false,
-    p_dynamax: bool = false,
-    p_terastallize: bool = false
-): 
-    cant_undo = p_cant_undo
-    error = p_error
-    actions = p_actions
-    forced_switches_left = p_forced_switches_left
-    forced_passes_left = p_forced_passes_left
-    switch_ins = p_switch_ins
-    z_move = p_z_move
-    mega = p_mega
-    ultra = p_ultra
-    dynamax = p_dynamax
-    terastallize = p_terastallize
+func _init(p_choice_data): 
+    if p_choice_data:
+        Utils.assign_properties(p_choice_data, self)
