@@ -3,7 +3,7 @@ class_name EventListener
 
 var order
 var priority
-var subOrder
+var sub_order
 var speed
 
 func _init(p_event_listener_data):
