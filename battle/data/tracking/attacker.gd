@@ -8,10 +8,10 @@ var move # String
 var slot # String
 var damageValue # EHR
 
-func _init(data):
-    source = data.source
-    damage = data.damage
-    thisTurn = data.thisTurn
-    move = data.move
-    slot = data.slot
-    damageValue = data.damageValue
+func _init(p_data):
+    source = p_data.source
+    damage = p_data.damage
+    thisTurn = p_data.thisTurn
+    move = p_data.move
+    slot = p_data.slot
+    damageValue = p_data.damageValue
