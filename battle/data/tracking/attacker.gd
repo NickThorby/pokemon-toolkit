@@ -6,7 +6,7 @@ var damage # int
 var this_turn # bool
 var move # String
 var slot # String
-var damage_value # EHR
+var damage_value # RelayVar
 
 func _init(p_attacker_data):
     Utils.assign_properties(p_attacker_data, self)

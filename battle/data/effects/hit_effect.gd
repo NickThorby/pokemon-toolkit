@@ -1,7 +1,7 @@
 extends Object
 class_name HitEffect
 
-var on_hit # bool | ((this: Battle, target: BattlePokemon, source: BattlePokemon, move: ActiveMove) => EHR | void)
+var on_hit # bool | ((this: Battle, target: BattlePokemon, source: BattlePokemon, move: ActiveMove) => RelayVar | void)
 var boosts # BoostTable
 var status # String
 var volatile_status # String
