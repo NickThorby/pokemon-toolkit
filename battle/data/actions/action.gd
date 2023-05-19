@@ -1,7 +1,6 @@
-extends Object
+extends ActionChoice
 class_name Action
 
-var choice: BattleData.ActionChoice
 var order
 var priority
 var fractional_priority
@@ -21,4 +20,4 @@ var event
 var index
 
 func _init(p_action_data): 
-    Utils.assign_properties(p_action_data, self)
+    super(p_action_data)
