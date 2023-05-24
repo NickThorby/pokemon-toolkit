@@ -140,3 +140,8 @@ enum EventHandlerState {
     FAIL_SILENTLY,
     SET_VALUE,
 }
+
+enum StatOverride {
+	TARGET,
+	SOURCE
+}
