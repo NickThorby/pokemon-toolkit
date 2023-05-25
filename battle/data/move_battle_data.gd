@@ -130,7 +130,7 @@ func _init(p_move_data):
     
     self.fullname = "move: %s" % self.name
     self.effect_type = BattleData.EffectType.MOVE
-    self.type = Dex.getType(p_move_data.type)
+    self.type = Global.Dex.getType(p_move_data.type)
     self.target = p_move_data.target
     self.base_power = int(p_move_data.base_power)
     self.accuracy = p_move_data.accuracy
@@ -141,7 +141,7 @@ func _init(p_move_data):
         self.crit_ratio = 1
 
     if(p_move_data.base_move_type):
-        self.base_move_type = Dex.getType(p_move_data.base_move_type)
+        self.base_move_type = Global.Dex.getType(p_move_data.base_move_type)
     else:
         self.base_move_type = self.type
 

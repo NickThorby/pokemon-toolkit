@@ -11,7 +11,7 @@ var on_drive # String
 
 # If this is a Memory: The type it turns Multi-Attack into.
 # null, if not a Memory.
-var on_memory # String
+var on_memory # PokemonType
 
 # If this is a mega stone: The name (e.g. Charizard-Mega-X) of the
 # forme this allows transformation into.
@@ -33,13 +33,13 @@ var z_move # true | String
 # If this is a generic Z crystal: The type (e.g. Fire) of the
 # Z Move this crystal allows the use of (e.g. Fire)
 # null, if not a generic Z crystal
-var z_move_type # String
+var z_move_type # PokemonType
 
 # If this is a species-specific Z crystal: The name
 # (e.g. Play Rough) of the move this crystal requires its
 # holder to know to use its Z move.
 # null, if not a species-specific Z crystal
-var z_move_from # String
+var z_move_from # MoveBattleData
 
 # If this is a species-specific Z crystal: An array of the
 # species of Pokemon that can use this crystal's Z move.
@@ -54,7 +54,7 @@ var is_berry # bool
 var ignore_klutz # bool
 
 # The type the holder will change into if it is an Arceus.
-var on_plate # String
+var on_plate # PokemonType
 
 # Is this item a Gem?
 var is_gem # bool
@@ -109,12 +109,12 @@ func _init(p_item_data):
         self.z_move = null
 
     if p_item_data.z_move_type:
-        self.z_move_type = p_item_data.z_move_type
+        self.z_move_type = Global.Dex.get_type(p_item_data.z_move_type)
     else:
         self.z_move_type = null
 
     if p_item_data.z_move_from:
-        self.z_move_from = p_item_data.z_move_from
+        self.z_move_from = Global.Dex.get_move(p_item_data.z_move_from)
     else:
         self.z_move_from = null
 
@@ -127,7 +127,7 @@ func _init(p_item_data):
     self.ignore_klutz = bool(p_item_data.ignore_klutz)
 
     if p_item_data.on_plate:
-        self.on_plate = p_item_data.on_plate
+        self.on_plate = Global.Dex.get_type(p_item_data.on_plate)
     else:
         self.on_plate = null
 

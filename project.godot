@@ -19,3 +19,4 @@ config/icon="res://icon.svg"
 
 Utils="*res://global/autoload/utils.gd"
 ErrorHandler="*res://global/autoload/error_handler.gd"
+Global="*res://global/autoload/global.gd"
