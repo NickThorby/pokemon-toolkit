@@ -14,7 +14,7 @@ class_name PokemonForm
 @export var evolves_into: Array[Dictionary] # {species: Species, trigger: PokemonData.EvolutionTrigger, condition: PokemonData.EvolutionCondition, condition_value: see_docs}
 
 # Forms this pokemon can change into, like megas. Does not include regional variants and cosmetic forms.
-@export var forms: Array[Dictionary] # {trigger: PokemonData.FormChangeTrigger, trigger_value: see_docs, form: PokemonForm}
+@export var forms: Array[Dictionary] # {triggers: Array[Dictionary] {trigger: PokemonData.FormChangeTrigger, trigger_value: see_docs}, form: PokemonForm}
 
 @export var base_stats: StatTable
 @export var ev_yields: StatTable
