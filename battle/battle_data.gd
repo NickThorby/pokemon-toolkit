@@ -5,7 +5,8 @@ enum Choice {
 	SWITCH,
 	INSTA_SWITCH,
 	REVIVAL_BLESSING,
-	BAG,
+	MEDICINE,
+	POKEBALL,
 	ROTATE,
 	TEAM,
 	SHIFT,
@@ -52,26 +53,6 @@ enum BattleType {
     BATTLE_ROYAL,
     MAX_RAID,
     TERA_RAID,
-}
-
-enum BattleRequestState {
-    TEAM_PREVIEW,
-    MOVE,
-    SWITCH,
-    BLANK,
-}
-
-enum EffectType {
-	CONDITION,
-	POKEMON,
-	MOVE,
-	ITEM,
-	ABILITY,
-	NATURE,
-	WEATHER,
-	STATUS,
-	TERASTAL,
-	RULE,
 }
 
 enum MoveFlag {
@@ -127,21 +108,4 @@ enum MoveTarget {
 	RANDOM_NORMAL, # The move targets an adjacent foe at random.
 	SCRIPTED, # The move targets the foe that damaged the user.
 	SELF, # The move affects the user of the move.
-}
-
-enum NonStandard {
-	PAST,
-	FUTURE,
-}
-
-enum EventHandlerState {
-    KEEP_GOING,
-    FAIL_LOUDLY,
-    FAIL_SILENTLY,
-    SET_VALUE,
-}
-
-enum StatOverride {
-	TARGET,
-	SOURCE
 }
