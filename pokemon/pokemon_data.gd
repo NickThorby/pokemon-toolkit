@@ -133,6 +133,9 @@ enum FormChangeTrigger {
     GROOM,
 }
 
-static func calc_max_hp(base_hp, level, iv, ev, gen):
-    return 0
-        
+static func calc_max_hp(base_hp, level, iv, ev):
+    return 0;
+
+static func calc_stat(base_stat, level, iv, ev):
+    return 0;
+

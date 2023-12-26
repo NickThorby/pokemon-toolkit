@@ -109,44 +109,44 @@ func _init(
     p_back_sprite_shiny_female: Texture = null
 ):
     self.form_index = p_form_index
-    self.species = Global.Dex.get_species(p_species)
+    self.species = Global.dex.get_species(p_species)
     self.form_name = p_form_name
     self.display_name = p_display_name
     self.category = p_category
     self.generation = p_generation
     self.pokedex_entries = p_pokedex_entries
-    self.evolves_from = Global.Dex.get_form(p_evolves_from)
+    self.evolves_from = Global.dex.get_form(p_evolves_from)
 
     self.evolves_into = []
     for evo in p_evolves_into:
         var evo_obj = {
-            "species": Global.Dex.get_species(evo["species"]),
+            "species": Global.dex.get_species(evo["species"]),
             "trigger": evo["trigger"],
             "condition": evo["condition"],
             "condition_value": evo["condition_value"]
         }
         if evo_obj["trigger"] == PokemonData.EvolutionTrigger.USE_ITEM:
-            evo_obj["item"] = Global.Dex.get_item(evo["item"])
+            evo_obj["item"] = Global.dex.get_item(evo["item"])
         
         if evo_obj["condition"] == PokemonData.EvolutionCondition.HELD_ITEM:
-            evo_obj["condition_value"] = Global.Dex.get_item(evo["condition_value"])
+            evo_obj["condition_value"] = Global.dex.get_item(evo["condition_value"])
         elif evo_obj["condition"] == PokemonData.EvolutionCondition.KNOWS_MOVE:
-            evo_obj["condition_value"] = Global.Dex.get_move(evo["condition_value"])
+            evo_obj["condition_value"] = Global.dex.get_move(evo["condition_value"])
         elif evo_obj["condition"] == PokemonData.EvolutionCondition.KNOWS_MOVE_TYPE:
-            evo_obj["condition_value"] = Global.Dex.get_type(evo["condition_value"])
+            evo_obj["condition_value"] = Global.dex.get_type(evo["condition_value"])
         elif evo_obj["condition"] == PokemonData.EvolutionCondition.MOVE_USED_NUMBER_OF_TIMES:
-            evo_obj["condition_value"]["move"] = Global.Dex.get_move(evo_obj["condition_value"]["move"])
+            evo_obj["condition_value"]["move"] = Global.dex.get_move(evo_obj["condition_value"]["move"])
         elif evo_obj["condition"] == PokemonData.EvolutionCondition.TYPE_IN_PARTY:
-            evo_obj["condition_value"] = Global.Dex.get_type(evo["condition_value"])
+            evo_obj["condition_value"] = Global.dex.get_type(evo["condition_value"])
         elif evo_obj["condition"] == PokemonData.EvolutionCondition.POKEMON_IN_PARTY:
-            evo_obj["condition_value"] = Global.Dex.get_form(evo["condition_value"])
+            evo_obj["condition_value"] = Global.dex.get_form(evo["condition_value"])
         elif evo_obj["condition"] == PokemonData.EvolutionCondition.DEFEATED_POKEMON_HOLDING_ITEM:
-            evo_obj["condition_value"]["species"] = Global.Dex.get_form(evo_obj["condition_value"]["species"])
-            evo_obj["condition_value"]["item"] = Global.Dex.get_item(evo_obj["condition_value"]["item"])
+            evo_obj["condition_value"]["species"] = Global.dex.get_form(evo_obj["condition_value"]["species"])
+            evo_obj["condition_value"]["item"] = Global.dex.get_item(evo_obj["condition_value"]["item"])
         elif evo_obj["condition"] == PokemonData.EvolutionCondition.TRADED_FOR_SPECIES:
-            evo_obj["condition_value"] = Global.Dex.get_form(evo["condition_value"])
+            evo_obj["condition_value"] = Global.dex.get_form(evo["condition_value"])
         elif evo_obj["condition"] == PokemonData.EvolutionCondition.ITEMS_IN_BAG:
-            evo_obj["condition_value"]["item"] = Global.Dex.get_item(evo_obj["condition_value"]["item"])
+            evo_obj["condition_value"]["item"] = Global.dex.get_item(evo_obj["condition_value"]["item"])
 
         self.evolves_into.append(evo_obj)
 
@@ -156,28 +156,28 @@ func _init(
     self.ev_yields = StatTable.new(p_ev_yields, 3, 0, 3)
     self.base_experience_yield = p_base_experience_yield
     self.base_happiness = p_base_happiness
-    self.primary_type = Global.Dex.get_type(p_primary_type)
-    self.secondary_type = Global.Dex.get_type(p_secondary_type)
-    self.primary_ability = Global.Dex.get_ability(p_primary_ability)
-    self.secondary_ability = Global.Dex.get_ability(p_secondary_ability)
-    self.hidden_ability = Global.Dex.get_ability(p_hidden_ability)
+    self.primary_type = Global.dex.get_type(p_primary_type)
+    self.secondary_type = Global.dex.get_type(p_secondary_type)
+    self.primary_ability = Global.dex.get_ability(p_primary_ability)
+    self.secondary_ability = Global.dex.get_ability(p_secondary_ability)
+    self.hidden_ability = Global.dex.get_ability(p_hidden_ability)
 
     self.learnset = p_learnset
 
     self.primary_egg_group = p_primary_egg_group
     self.secondary_egg_group = p_secondary_egg_group
     self.egg_steps = p_egg_steps
-    self.growth_rate = Global.Dex.get_growth_rate(p_growth_rate)
+    self.growth_rate = Global.dex.get_growth_rate(p_growth_rate)
     self.gender_ratio = p_gender_ratio
     self.has_gender_differences = p_has_gender_differences
     self.height = p_height
     self.weight = p_weight
-    self.pokedex_color = Global.Dex.get_pokedex_color(p_pokedex_color)
+    self.pokedex_color = Global.dex.get_pokedex_color(p_pokedex_color)
 
     self.wild_held_items = []
     for item in p_wild_held_items:
         self.wild_held_items.append({
-            "item": Global.Dex.get_item(item["item"]),
+            "item": Global.dex.get_item(item["item"]),
             "chance": item["chance"]
         })
 

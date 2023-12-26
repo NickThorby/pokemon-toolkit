@@ -35,10 +35,10 @@ func _init(
         self.form = p_form
         self.level = p_level
         self.ivs = p_ivs
-        #self.evs = StatTable()
+        self.evs = StatTable.new({"hp": 0, "atk": 0, "def": 0, "spa": 0, "spd": 0, "spe": 0}, Global.dex.settings.max_evs_per_stat, 0, Global.dex.settings.max_evs_per_pokemon)
         self.nickname = ""
         self.nature = p_nature
         self.gender = p_gender
         self.happiness = p_form.base_happiness
-        self.max_hp = PokemonData.calc_max_hp(self.form.base_stats.get_stat(PokemonData.PokemonStat.HP), self.level, self.ivs.get_stat(PokemonData.PokemonStat.HP), self.evs.get_stat(PokemonData.PokemonStat.HP), 9)
+        self.max_hp = PokemonData.calc_max_hp(self.form.base_stats.hp, self.level, self.ivs.hp, self.evs.hp)
 

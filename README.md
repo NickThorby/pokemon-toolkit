@@ -76,5 +76,10 @@ REGION: condition_value:string
 
 
 Dex Settings
-max_ev_per_stat: int
+max_evs_per_stat: int
+max_evs_per_pokemon: int
 generation: int
+enable_mega_evolutions: bool
+enable_primal_reversions: bool
+enable_z_moves: bool
+enable_dynamax: bool

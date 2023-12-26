@@ -39,4 +39,4 @@ func _init(
     current_pp = p_current_pp
     category = p_category
     contest_type = p_contest_type
-    type = Global.Dex.get_type(p_type)
+    type = Global.dex.get_type(p_type)
