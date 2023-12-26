@@ -19,7 +19,7 @@ func clone():
 # - random(n) returns an integer in [0, n)
 # - random(m, n) returns an integer in [m, n)
 # m and n are converted to integers via Math.floor. If the result is NaN, they are ignored.
-func next(from, to):
+func next(from = null, to = null):
 	self.current_seed = self.next_frame(self.current_seed)
 	var result = (self.current_seed[0] << 16) + self.current_seed[1]
 	if from != null:

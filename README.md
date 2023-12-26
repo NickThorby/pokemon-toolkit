@@ -76,6 +76,7 @@ REGION: condition_value:string
 
 
 Dex Settings
+prng_seed: string
 max_evs_per_stat: int
 max_evs_per_pokemon: int
 generation: int

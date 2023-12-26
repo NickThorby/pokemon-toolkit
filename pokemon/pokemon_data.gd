@@ -139,3 +139,12 @@ static func calc_max_hp(base_hp, level, iv, ev):
 static func calc_stat(base_stat, level, iv, ev):
     return 0;
 
+static func calc_hidden_power_type(ivs):
+    return 0;
+
+static func calc_hidden_power_power(ivs):
+    return 0;
+
+static func calc_shininess(personality_value, ivs):
+    return 0;
+
