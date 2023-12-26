@@ -61,8 +61,6 @@ class_name PokemonForm
 @export var back_sprite_female: Texture
 @export var back_sprite_shiny_female: Texture
 
-@export var battle_data: SpeciesBattleData
-
 func _init(
     p_form_index: int = 0,
     p_species: String = "",
@@ -106,8 +104,7 @@ func _init(
     p_front_sprite_female: Texture = null,
     p_front_sprite_shiny_female: Texture = null,
     p_back_sprite_female: Texture = null,
-    p_back_sprite_shiny_female: Texture = null,
-    p_battle_data: Dictionary = {}
+    p_back_sprite_shiny_female: Texture = null
 ):
     self.form_index = p_form_index
     self.species = Global.Dex.get_species(p_species)
@@ -195,5 +192,3 @@ func _init(
     self.front_sprite_shiny_female = p_front_sprite_shiny_female
     self.back_sprite_female = p_back_sprite_female
     self.back_sprite_shiny_female = p_back_sprite_shiny_female
-
-    self.battle_data = SpeciesBattleData.new(p_battle_data)

@@ -18,8 +18,6 @@ class_name Move
 
 @export var type: PokemonType
 
-@export var battle_data: MoveBattleData
-
 func _init(
     p_name: String = "",
     p_description: String = "",
@@ -30,8 +28,7 @@ func _init(
     p_current_pp: int = 0,
     p_category: PokemonData.MoveCategory = PokemonData.MoveCategory.PHYSICAL,
     p_contest_type: PokemonData.ContestType = PokemonData.ContestType.COOL,
-    p_type: String = "",
-    p_battle_data: Dictionary = {}
+    p_type: String = ""
 ):
     name = p_name
     description = p_description
@@ -43,4 +40,3 @@ func _init(
     category = p_category
     contest_type = p_contest_type
     type = Global.Dex.get_type(p_type)
-    battle_data = MoveBattleData.new(p_battle_data)
