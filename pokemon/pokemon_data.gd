@@ -40,11 +40,13 @@ enum PokemonStat{
     SPEED,
     ACCURACY,
     EVASION,
+    SPECIAL # for gen 2 and below
 }
 
 enum Gender {
     MALE,
-    FEMALE
+    FEMALE,
+    GENDERLESS
 }
 enum EggGroup {
     NONE,
@@ -130,3 +132,7 @@ enum FormChangeTrigger {
     HP_ABOVE_25,
     GROOM,
 }
+
+static func calc_max_hp(base_hp, level, iv, ev, gen):
+    return 0
+        

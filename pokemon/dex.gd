@@ -1,6 +1,7 @@
 extends Resource
 class_name Dex
 
+var settings: Dictionary
 var abilities: Dictionary
 var items: Dictionary
 var moves: Dictionary
@@ -60,3 +61,9 @@ func get_pokedex_color(id: String) -> PokedexColor:
         return pokedex_colors[id]
     else:
         return null
+
+func get_setting(id: String) -> String:
+    if settings.has(id):
+        return settings[id]
+    else:
+        return ""

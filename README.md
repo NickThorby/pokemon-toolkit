@@ -73,3 +73,8 @@ SPIN_LENGTH: condition_value:Dictionary with keys: length:int, operator:string, 
 SPIN_DIRECTION: condition_value:string
 LOCATION: condition_value:string
 REGION: condition_value:string
+
+
+Dex Settings
+max_ev_per_stat: int
+generation: int

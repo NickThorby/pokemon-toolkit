@@ -19,6 +19,7 @@ class_name PokemonForm
 @export var base_stats: StatTable
 @export var ev_yields: StatTable
 @export var base_experience_yield: int
+@export var base_happiness: int
 
 @export var primary_type: PokemonType
 @export var secondary_type: PokemonType
@@ -75,6 +76,7 @@ func _init(
     p_base_stats: Dictionary = {},
     p_ev_yields: Dictionary = {},
     p_base_experience_yield: int = 0,
+    p_base_happiness: int = 0,
     p_primary_type: String = "",
     p_secondary_type: String = "",
     p_primary_ability: String = "",
@@ -153,6 +155,7 @@ func _init(
     self.base_stats = StatTable.new(p_base_stats, 255, 1)
     self.ev_yields = StatTable.new(p_ev_yields, 3, 0, 3)
     self.base_experience_yield = p_base_experience_yield
+    self.base_happiness = p_base_happiness
     self.primary_type = Global.Dex.get_type(p_primary_type)
     self.secondary_type = Global.Dex.get_type(p_secondary_type)
     self.primary_ability = Global.Dex.get_ability(p_primary_ability)
