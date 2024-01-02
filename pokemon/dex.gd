@@ -15,55 +15,55 @@ func _init():
     pass
 
 func get_ability(id: String) -> Ability:
-    if abilities.has(id):
-        return abilities[id]
+    if self.abilities.has(id):
+        return self.abilities[id]
     else:
         return null
 
 func get_item(id: String) -> Item:
-    if items.has(id):
-        return items[id]
+    if self.items.has(id):
+        return self.items[id]
     else:
         return null
 
 func get_move(id: String) -> Move:
-    if moves.has(id):
-        return moves[id]
+    if self.moves.has(id):
+        return self.moves[id]
     else:
         return null
 
 func get_pokemon_species(id: String) -> PokemonSpecies:
-    if pokemon_species.has(id):
-        return pokemon_species[id]
+    if self.pokemon_species.has(id):
+        return self.pokemon_species[id]
     else:
         return null
 
 func get_pokemon_form(id: String) -> PokemonForm:
-    if pokemon_forms.has(id):
-        return pokemon_forms[id]
+    if self.pokemon_forms.has(id):
+        return self.pokemon_forms[id]
     else:
         return null
 
 func get_type(id: String) -> PokemonType:
-    if types.has(id):
-        return types[id]
+    if self.types.has(id):
+        return self.types[id]
     else:
         return null
 
 func get_growth_rate(id: String) -> PokemonGrowthRate:
-    if growth_rates.has(id):
-        return growth_rates[id]
+    if self.growth_rates.has(id):
+        return self.growth_rates[id]
     else:
         return null
 
 func get_pokedex_color(id: String) -> PokedexColor:
-    if pokedex_colors.has(id):
-        return pokedex_colors[id]
+    if self.pokedex_colors.has(id):
+        return self.pokedex_colors[id]
     else:
         return null
 
 func get_setting(id: String) -> String:
-    if settings.has(id):
-        return settings[id]
+    if self.settings.has(id):
+        return self.settings[id]
     else:
         return ""

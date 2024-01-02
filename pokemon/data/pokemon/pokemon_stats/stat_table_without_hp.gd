@@ -67,71 +67,71 @@ func _init(
 	elif p_stat_data.has(PokemonData.PokemonStat.SPEED):
 		self.speed = p_stat_data[PokemonData.PokemonStat.SPEED]
 
-	stat_max = p_stat_max
-	stat_min = p_stat_min
-	stat_max_total = p_stat_max_total
+	self.stat_max = p_stat_max
+	self.stat_min = p_stat_min
+	self.stat_max_total = p_stat_max_total
 	
 func get_attack():
 	return attack
 
 func set_attack(p_attack):
-	attack = p_attack
+	self.attack = p_attack
 
 func get_defense():
 	return defense
 
 func set_defense(p_defense):
-	defense = p_defense
+	self.defense = p_defense
 
 func get_special_attack():
 	return special_attack
 
 func set_special_attack(p_special_attack):
-	special_attack = p_special_attack
+	self.special_attack = p_special_attack
 
 func get_special_defense():
 	return special_defense
 
 func set_special_defense(p_special_defense):
-	special_defense = p_special_defense
+	self.special_defense = p_special_defense
 
 func get_speed():
 	return speed
 
 func set_speed(p_speed):
-	speed = p_speed
+	self.speed = p_speed
 
 func get_special():
 	return special_attack
 
 func set_special(p_special):
-	special_attack = p_special
+	self.special_attack = p_special
 
 func get_stat(p_stat):
 	if typeof(p_stat) == TYPE_STRING:
 		if p_stat == 'attack' or p_stat == 'atk':
-			return attack
+			return self.attack
 		elif p_stat == 'defense' or p_stat == 'def':
-			return defense
+			return self.defense
 		elif p_stat == 'special_attack' or p_stat == 'sp_atk' or p_stat == 'spa' or p_stat == "special" or p_stat == 'spc':
-			return special_attack
+			return self.special_attack
 		elif p_stat == 'special_defense' or p_stat == 'sp_def' or p_stat == 'spd':
-			return special_defense
+			return self.special_defense
 		elif p_stat == 'speed' or p_stat == 'spe':
-			return speed
+			return self.speed
 		else:
 			return null
 	elif typeof(p_stat) == TYPE_INT:
 		if p_stat == PokemonData.PokemonStat.ATTACK:
-			return attack
+			return self.attack
 		elif p_stat == PokemonData.PokemonStat.DEFENSE:
-			return defense
+			return self.defense
 		elif p_stat == PokemonData.PokemonStat.SPECIAL_ATTACK or p_stat == PokemonData.PokemonStat.SPECIAL:
-			return special_attack
+			return self.special_attack
 		elif p_stat == PokemonData.PokemonStat.SPECIAL_DEFENSE:
-			return special_defense
+			return self.special_defense
 		elif p_stat == PokemonData.PokemonStat.SPEED:
-			return speed
+			return self.speed
 		else:
 			return null
 	else:

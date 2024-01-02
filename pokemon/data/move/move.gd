@@ -1,7 +1,6 @@
 extends Dexable
 class_name Move
 
-var id: String
 @export var name: String
 @export var description: String
 @export var short_description: String
@@ -30,13 +29,13 @@ func _init(
     p_contest_type: PokemonData.ContestType = PokemonData.ContestType.COOL,
     p_type: String = ""
 ):
-    id = Utils.to_id(p_name)
-    name = p_name
-    description = p_description
-    short_description = p_short_description
-    base_power = p_base_power
-    accuracy = p_accuracy
-    max_pp = p_max_pp
-    category = p_category
-    contest_type = p_contest_type
-    type = Global.dex.get_type(p_type)
+    self.id = Utils.to_id(p_name)
+    self.name = p_name
+    self.description = p_description
+    self.short_description = p_short_description
+    self.base_power = p_base_power
+    self.accuracy = p_accuracy
+    self.max_pp = p_max_pp
+    self.category = p_category
+    self.contest_type = p_contest_type
+    self.type = Global.dex.get_type(p_type)

@@ -10,5 +10,6 @@ func _init(
     p_name: String = "",
     p_description: String = ""
 ):
-    name = p_name
-    description = p_description
+    self.id = Utils.to_id(p_name)
+    self.name = p_name
+    self.description = p_description

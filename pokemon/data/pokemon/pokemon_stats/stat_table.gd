@@ -19,37 +19,37 @@ func get_hp():
     return hp
 
 func set_hp(p_hp):
-    hp = p_hp
+    self.hp = p_hp
 
 func get_stat(p_stat):
     if typeof(p_stat) == TYPE_STRING:
         if p_stat == 'hp':
-            return hp
+            return self.hp
         elif p_stat == 'attack' or p_stat == 'atk':
-            return attack
+            return self.attack
         elif p_stat == 'defense' or p_stat == 'def':
-            return defense
+            return self.defense
         elif p_stat == 'special_attack' or p_stat == 'sp_atk' or p_stat == 'spa' or p_stat == "special" or p_stat == 'spc':
-            return special_attack
+            return self.special_attack
         elif p_stat == 'special_defense' or p_stat == 'sp_def' or p_stat == 'spd':
-            return special_defense
+            return self.special_defense
         elif p_stat == 'speed' or p_stat == 'spe':
-            return speed
+            return self.speed
         else:
             return null
     elif typeof(p_stat) == TYPE_INT:
         if p_stat == PokemonData.PokemonStat.HP:
-            return hp
+            return self.hp
         elif p_stat == PokemonData.PokemonStat.ATTACK:
-            return attack
+            return self.attack
         elif p_stat == PokemonData.PokemonStat.DEFENSE:
-            return defense
+            return self.defense
         elif p_stat == PokemonData.PokemonStat.SPECIAL_ATTACK or p_stat == PokemonData.PokemonStat.SPECIAL:
-            return special_attack
+            return self.special_attack
         elif p_stat == PokemonData.PokemonStat.SPECIAL_DEFENSE:
-            return special_defense
+            return self.special_defense
         elif p_stat == PokemonData.PokemonStat.SPEED:
-            return speed
+            return self.speed
         else:
             return null
     else:

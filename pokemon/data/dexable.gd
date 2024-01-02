@@ -1,7 +1,8 @@
 extends Resource
 class_name Dexable
 
-var dex_override
+var id: String
+var dex_override: String
 
 func _init(
     p_dex_override = null

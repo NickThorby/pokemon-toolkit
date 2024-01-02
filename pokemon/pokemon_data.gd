@@ -133,6 +133,14 @@ enum FormChangeTrigger {
     GROOM,
 }
 
+enum Flavor {
+    SPICY,
+    DRY,
+    SWEET,
+    BITTER,
+    SOUR,
+}
+
 static func calc_max_hp(base_hp, level, iv, ev):
     return 0;
 

@@ -1,7 +1,6 @@
 extends Dexable
 class_name PokemonForm
 
-var id: String
 @export var form_index: int
 @export var species: PokemonSpecies
 @export var form_name: String
