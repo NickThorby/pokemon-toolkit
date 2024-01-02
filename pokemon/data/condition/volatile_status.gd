@@ -1,2 +1,0 @@
-extends Condition
-class_name VolatileStatus

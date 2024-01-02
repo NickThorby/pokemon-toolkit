@@ -1,12 +1,14 @@
 extends Dexable
 class_name Move
 
+@export var number: int
 @export var name: String
 @export var description: String
 @export var short_description: String
 
 
 @export var base_power: String
+@export var priority: int
 @export var accuracy: String
 @export var max_pp: int
 
@@ -17,6 +19,13 @@ class_name Move
 @export var flags: Array[MoveData.MoveFlag]
 
 @export var type: PokemonType
+
+@export var is_z: bool;
+@export var z_item: Item;
+@export var z_move_boost: BoostTable;
+
+@export var is_max: bool;
+@export var max_pokemon: PokemonForm;
 
 func _init(
     p_name: String = "",
