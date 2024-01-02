@@ -34,8 +34,7 @@ func _init(
     p_level: int, 
     p_ivs: StatTable, 
     p_nature: Nature, 
-    p_gender: PokemonData.Gender):
-        var prng = PRNG.new(Global.dex.settings.prng_seed)
+    p_gender: PokemonData.Gender): 
         self.form = p_form
         self.level = p_level
         self.ivs = p_ivs
@@ -53,7 +52,7 @@ func _init(
         if(!self.form.secondary_type):
             self.tera_type = self.form.primary_type
         else:
-            var tera_type_int = prng.next(0, 2)
+            var tera_type_int = Global.prng.next(0, 2)
             if(tera_type_int == 0):
                 self.tera_type = self.form.primary_type
             else:
@@ -61,7 +60,7 @@ func _init(
         self.status = null
         self.pokeball = null
         self.held_item = null
-        self.personality_value = prng.next(0, 4294967296)
-        self.encryption_constant = prng.next(0, 4294967296)
+        self.personality_value = Global.prng.next(0, 4294967296)
+        self.encryption_constant = Global.prng.next(0, 4294967296)
         self.shiny = PokemonData.calc_shininess(self.personality_value, self.ivs)
 
