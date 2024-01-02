@@ -1,6 +1,7 @@
 extends Dexable
 class_name PokemonForm
 
+var id: String
 @export var form_index: int
 @export var species: PokemonSpecies
 @export var form_name: String
@@ -64,7 +65,7 @@ class_name PokemonForm
 
 func _init(
     p_form_index: int = 0,
-    p_species: String = "",
+    p_species: PokemonSpecies = null,
     p_form_name: String = "",
     p_display_name: String = "",
     p_category: String = "",
@@ -108,6 +109,7 @@ func _init(
     p_back_sprite_female: Texture = null,
     p_back_sprite_shiny_female: Texture = null
 ):
+    self.id = Utils.to_id(p_species.name + str(p_form_index))
     self.form_index = p_form_index
     self.species = Global.dex.get_species(p_species)
     self.form_name = p_form_name

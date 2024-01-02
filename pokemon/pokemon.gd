@@ -29,6 +29,11 @@ var held_item: Item
 var personality_value: int
 var encryption_constant: int
 
+var move_slot_1: MoveSlot
+var move_slot_2: MoveSlot
+var move_slot_3: MoveSlot
+var move_slot_4: MoveSlot
+
 func _init(
     p_form: PokemonForm, 
     p_level: int, 
@@ -56,4 +61,5 @@ func _init(
         self.personality_value = Global.prng.next(0, 4294967296)
         self.encryption_constant = Global.prng.next(0, 4294967296)
         self.shiny = PokemonData.calc_shininess(self.personality_value, self.ivs)
+        
 

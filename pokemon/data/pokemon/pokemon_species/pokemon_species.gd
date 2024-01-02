@@ -1,6 +1,7 @@
 extends Dexable
 class_name PokemonSpecies
 
+var id: String
 @export var national_dex_number: int
 @export var name: String
 @export var classification: PokemonData.PokemonClassification
@@ -14,6 +15,7 @@ func _init(
     p_gender: PokemonData.PokemonGender = PokemonData.PokemonGender.GENDERLESS,
     p_footprint: Texture = null
 ):
+    id = Utils.to_id(p_name)
     national_dex_number = p_national_dex_number
     name = p_name
     classification = p_classification
