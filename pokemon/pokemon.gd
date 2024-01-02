@@ -49,14 +49,7 @@ func _init(
         self.hidden_power_power = PokemonData.calc_hidden_power_power(self.ivs)
         self.dynamax_level = 0
         self.gigantimax_factor = false
-        if(!self.form.secondary_type):
-            self.tera_type = self.form.primary_type
-        else:
-            var tera_type_int = Global.prng.next(0, 2)
-            if(tera_type_int == 0):
-                self.tera_type = self.form.primary_type
-            else:
-                self.tera_type = self.form.secondary_type
+        self.tera_type = PokemonData.calc_tera_type(self.primary_type, self.secondary_type)
         self.status = null
         self.pokeball = null
         self.held_item = null
