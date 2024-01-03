@@ -1,2 +1,2 @@
-extends Dexable
+extends Resource
 class_name Ability

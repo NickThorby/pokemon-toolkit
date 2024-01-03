@@ -1,4 +1,4 @@
-extends Dexable
+extends Resource
 class_name Move
 
 @export var number: int
@@ -38,7 +38,6 @@ func _init(
     p_contest_type: PokemonData.ContestType = PokemonData.ContestType.COOL,
     p_type: String = ""
 ):
-    self.id = Utils.to_id(p_name)
     self.name = p_name
     self.description = p_description
     self.short_description = p_short_description

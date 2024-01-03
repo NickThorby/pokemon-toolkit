@@ -1,4 +1,4 @@
-extends Dexable
+extends Resource
 class_name PokemonForm
 
 @export var form_index: int
@@ -77,11 +77,11 @@ func _init(
     p_ev_yields: Dictionary = {},
     p_base_experience_yield: int = 0,
     p_base_happiness: int = 0,
-    p_primary_type: String = "",
-    p_secondary_type: String = "",
-    p_primary_ability: String = "",
-    p_secondary_ability: String = "",
-    p_hidden_ability: String = "",
+    p_primary_type: PokemonType = null,
+    p_secondary_type: PokemonType = null,
+    p_primary_ability: Ability = null,
+    p_secondary_ability: Ability = null,
+    p_hidden_ability: Ability = null,
     p_learnset: Dictionary = {},
     p_primary_egg_group: PokemonData.EggGroup = PokemonData.EggGroup.UNDISCOVERED,
     p_secondary_egg_group: PokemonData.EggGroup = PokemonData.EggGroup.UNDISCOVERED,
@@ -157,11 +157,11 @@ func _init(
     self.ev_yields = StatTable.new(p_ev_yields, 3, 0, 3)
     self.base_experience_yield = p_base_experience_yield
     self.base_happiness = p_base_happiness
-    self.primary_type = Global.dex.get_type(p_primary_type)
-    self.secondary_type = Global.dex.get_type(p_secondary_type)
-    self.primary_ability = Global.dex.get_ability(p_primary_ability)
-    self.secondary_ability = Global.dex.get_ability(p_secondary_ability)
-    self.hidden_ability = Global.dex.get_ability(p_hidden_ability)
+    self.primary_type = p_primary_type
+    self.secondary_type = p_secondary_type
+    self.primary_ability = p_primary_ability
+    self.secondary_ability = p_secondary_ability
+    self.hidden_ability = p_hidden_ability
 
     self.learnset = p_learnset
 
@@ -178,7 +178,7 @@ func _init(
     self.wild_held_items = []
     for item in p_wild_held_items:
         self.wild_held_items.append({
-            "item": Global.dex.get_item(item["item"]),
+            "item": item["item"],
             "chance": item["chance"]
         })
 

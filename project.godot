@@ -18,5 +18,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 Utils="*res://global/autoload/utils.gd"
+PokemonUtils="*res://global/autoload/pokemon_utils.gd"
 ErrorHandler="*res://global/autoload/error_handler.gd"
 Global="*res://global/autoload/global.gd"

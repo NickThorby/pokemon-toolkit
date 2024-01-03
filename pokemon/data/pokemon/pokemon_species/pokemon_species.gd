@@ -1,4 +1,4 @@
-extends Dexable
+extends Resource
 class_name PokemonSpecies
 
 @export var national_dex_number: int
@@ -14,7 +14,6 @@ func _init(
     p_gender: PokemonData.PokemonGender = PokemonData.PokemonGender.GENDERLESS,
     p_footprint: Texture = null
 ):
-    self.id = Utils.to_id(p_name)
     self.national_dex_number = p_national_dex_number
     self.name = p_name
     self.classification = p_classification

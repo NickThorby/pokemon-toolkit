@@ -1,4 +1,4 @@
-extends Dexable
+extends Resource
 class_name PokemonType
 
 	

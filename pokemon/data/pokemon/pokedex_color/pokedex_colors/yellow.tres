@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="PokedexColor" load_steps=2 format=3 uid="uid://byr685xlho4ea"]
-
-[ext_resource type="Script" path="res://game/data/pokemon/pokedex_color/pokedex_color.gd" id="1_yhf6o"]
-
-[resource]
-script = ExtResource("1_yhf6o")
-name = "Yellow"
-color = Color(1, 1, 0.6, 1)

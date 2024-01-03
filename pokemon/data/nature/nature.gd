@@ -1,4 +1,4 @@
-extends Dexable
+extends Resource
 class_name Nature
 
 @export var name: String
