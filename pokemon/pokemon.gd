@@ -21,8 +21,6 @@ class_name Pokemon
 @export var gigantimax_factor: bool # gen 8 only
 @export var tera_type: PokemonType # gen 9 only
 
-@export var status: NonVolatileStatus
-
 @export var pokeball: Item
 
 var held_item: Item
