@@ -54,3 +54,10 @@ enum BattleType {
     MAX_RAID,
     TERA_RAID,
 }
+
+enum EventHandlerState {
+    KEEP_GOING,
+    FAIL_LOUDLY,
+    FAIL_SILENTLY,
+    SET_VALUE,
+}
